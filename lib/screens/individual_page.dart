@@ -259,6 +259,9 @@ class _IndividualPageState extends State<IndividualPage> {
       height: 278,
       width: MediaQuery.of(context).size.width,
       child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
         margin: EdgeInsets.all(18),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),

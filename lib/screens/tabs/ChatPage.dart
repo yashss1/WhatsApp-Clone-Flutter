@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/custom/ChatCard.dart';
 import 'package:whatsapp/model/chat_model.dart';
+import 'package:whatsapp/screens/SelectContact.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({Key? key}) : super(key: key);
@@ -17,6 +18,7 @@ class _ChatPageState extends State<ChatPage> {
       currentMessage: "Kahi nhi just Tp",
       time: "18:40",
       icon: "person.svg",
+      status: "",
     ),
     ChatModel(
       name: "Aditya S",
@@ -24,6 +26,7 @@ class _ChatPageState extends State<ChatPage> {
       currentMessage: "Shant bas jara",
       time: "1:40",
       icon: "person.svg",
+      status: "",
     ),
     ChatModel(
       name: "ToMakeItEasyToShar...",
@@ -31,6 +34,7 @@ class _ChatPageState extends State<ChatPage> {
       currentMessage: "Kay krtay re?",
       time: "18:50",
       icon: "groups.svg",
+      status: "",
     ),
     ChatModel(
       name: "Moma",
@@ -38,6 +42,7 @@ class _ChatPageState extends State<ChatPage> {
       currentMessage: "Mla bhuk lagli!!",
       time: "19:40",
       icon: "person.svg",
+      status: "",
     ),
     ChatModel(
       name: "SE-10",
@@ -45,6 +50,7 @@ class _ChatPageState extends State<ChatPage> {
       currentMessage: "Meet at 9 today!",
       time: "3:40",
       icon: "groups.svg",
+      status: "",
     ),
     ChatModel(
       name: "Suyog Patil",
@@ -52,6 +58,7 @@ class _ChatPageState extends State<ChatPage> {
       currentMessage: "Zingur",
       time: "6:40",
       icon: "groups.svg",
+      status: "",
     ),
     ChatModel(
       name: "Sudesh Rampurkar",
@@ -59,6 +66,7 @@ class _ChatPageState extends State<ChatPage> {
       currentMessage: "Get in Touch",
       time: "8:40",
       icon: "groups.svg",
+      status: "",
     ),
     ChatModel(
       name: "Yash Sonawane",
@@ -66,6 +74,7 @@ class _ChatPageState extends State<ChatPage> {
       currentMessage: "Kahi nhi just Tp",
       time: "18:40",
       icon: "person.svg",
+      status: "",
     ),
     ChatModel(
       name: "Aditya S",
@@ -73,6 +82,7 @@ class _ChatPageState extends State<ChatPage> {
       currentMessage: "Shant bas jara",
       time: "1:40",
       icon: "person.svg",
+      status: "",
     ),
     ChatModel(
       name: "ToMakeItEasyToShar...",
@@ -80,13 +90,17 @@ class _ChatPageState extends State<ChatPage> {
       currentMessage: "Kay krtay re?",
       time: "18:50",
       icon: "groups.svg",
+      status: "",
     ),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (builder) => SelectContact()));
+        },
         child: Icon(Icons.chat),
       ),
       body: ListView.builder(
